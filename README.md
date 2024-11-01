@@ -4,6 +4,8 @@
 
 ```shell
 brew tap eng618/eng
+
+brew install eng
 ```
 
 ## Source
