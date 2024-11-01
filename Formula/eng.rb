@@ -5,11 +5,13 @@ class Eng < Formula
   sha256 "2e0df748693261740eb62d8ecc2d88af11c019ce107f38ab832556e1ea9fc085"
   license "MIT"
 
+depends_on "go" => :build
+
   def install
     system "go", "build",  "-o", bin/"eng"
   end
 
   test do
-    system bin/"eng", "--help"
+    system "#{bin}/eng", "--version"
   end
 end
