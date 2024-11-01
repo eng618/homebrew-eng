@@ -9,6 +9,15 @@ depends_on "go" => :build
 
   def install
     system "go", "build",  "-o", bin/"eng"
+
+    # Install shell completions
+    generate_completions
+  end
+
+  def generate_completions
+    (bash_completion/"eng").write Utils.safe_popen_read("#{bin}/eng", "completion", "bash")
+    (zsh_completion/"_eng").write Utils.safe_popen_read("#{bin}/eng", "completion", "zsh")
+    (fish_completion/"eng.fish").write Utils.safe_popen_read("#{bin}/eng", "completion", "fish")
   end
 
   test do
