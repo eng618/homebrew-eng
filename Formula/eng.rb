@@ -1,8 +1,8 @@
 class Eng < Formula
   desc "Personal cli to help facilitate my normal workflow"
   homepage "https://github.com/eng618/homebrew-eng"
-  url "https://github.com/eng618/eng/archive/refs/tags/v0.14.1.tar.gz"
-  sha256 "2e0df748693261740eb62d8ecc2d88af11c019ce107f38ab832556e1ea9fc085"
+  url "https://github.com/eng618/eng/archive/refs/tags/v0.14.3.tar.gz"
+  sha256 "6aa7a1e75b6279a2ad8b0795870d973182d0641b20caae747334a554884956cf"
   license "MIT"
 
   depends_on "go" => :build
