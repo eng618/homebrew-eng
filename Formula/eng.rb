@@ -1,8 +1,18 @@
 class Eng < Formula
   desc 'Personal cli to help facilitate my normal workflow'
   homepage 'https://github.com/eng618/eng'
-  url 'https://github.com/eng618/eng/releases/download/v0.15.4/eng_darwin_amd64.tar.gz'
-  sha256 ''
+  if OS.mac?
+    if Hardware::CPU.intel?
+      url 'https://github.com/eng618/eng/releases/download/v0.15.5/eng_Darwin_x86_64.tar.gz'
+      sha256 ''
+    elsif Hardware::CPU.arm?
+      url 'https://github.com/eng618/eng/releases/download/v0.15.5/eng_Darwin_arm64.tar.gz'
+      sha256 ''
+    end
+  elsif OS.linux?
+    url 'https://github.com/eng618/eng/releases/download/v0.15.5/eng_Linux_arm64.tar.gz'
+    sha256 ''
+  end
   license 'MIT'
 
   depends_on 'go' => :build
