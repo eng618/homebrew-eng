@@ -3,15 +3,15 @@ class Eng < Formula
   homepage 'https://github.com/eng618/eng'
   if OS.mac?
     if Hardware::CPU.intel?
-      url 'https://github.com/eng618/eng/releases/download/v0.15.12/eng_Darwin_x86_64.tar.gz'
-      sha256 '587db12c17ddd44368c943ba131eb1857fd974852c3d163613a93bf4c66e167d'
+      url 'https://github.com/eng618/eng/releases/download/v0.15.13/eng_Darwin_x86_64.tar.gz'
+      sha256 'c284f1b7690682e61e733047f3e5a87f7a552e8ab3c5dc35a45a1ea68a0bb847'
     elsif Hardware::CPU.arm?
-      url 'https://github.com/eng618/eng/releases/download/v0.15.12/eng_Darwin_arm64.tar.gz'
-      sha256 '13426cf12bdeceb061fc1fa807272443247b377f6ffb477b12ca0c7efb3a2f9f'
+      url 'https://github.com/eng618/eng/releases/download/v0.15.13/eng_Darwin_arm64.tar.gz'
+      sha256 'f92681ecbd3bec781bd3ae97bac419072f001d1ec1fc77affc236428d621f9f2'
     end
   elsif OS.linux?
-    url 'https://github.com/eng618/eng/releases/download/v0.15.12/eng_Linux_arm64.tar.gz'
-    sha256 '81f0c46a7dbae84ba95c8e38550b8c841516cf0ac1157a2ce384b9cba2f8ab83'
+    url 'https://github.com/eng618/eng/releases/download/v0.15.13/eng_Linux_arm64.tar.gz'
+    sha256 '9ec0ae517e490f24d4c530481bb32335f36a4e020fabce8ab4f62e1303cfe8b5'
   end
   license 'MIT'
 
