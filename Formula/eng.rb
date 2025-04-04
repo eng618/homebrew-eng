@@ -3,18 +3,18 @@ class Eng < Formula
   homepage 'https://github.com/eng618/eng'
   case
   when OS.mac? && Hardware::CPU.intel?
-    url 'https://github.com/eng618/eng/releases/download/v0.16.14/eng_Darwin_x86_64.tar.gz'
-    sha256 'c1c3f52d1532c511a2fb0e8ddea54898ee6b221a515ed14a0469f0bb2fc872b3'
+    url 'https://github.com/eng618/eng/releases/download/v0.16.15/eng_Darwin_x86_64.tar.gz'
+    sha256 'b19adb93a0b5af1649774fc9b94a1feb97fd51c3dbe71b1a3bfe427976ec7814'
   when OS.mac? && Hardware::CPU.arm?
-    url 'https://github.com/eng618/eng/releases/download/v0.16.14/eng_Darwin_arm64.tar.gz'
-    sha256 '965590a8fab50241bfd0cb910374a72bc21e7753929005971d39ab593da3a866'
+    url 'https://github.com/eng618/eng/releases/download/v0.16.15/eng_Darwin_arm64.tar.gz'
+    sha256 'b7723e3b31c661b4e2ac1ade296af489bf30673a4010801a4c092f3f4a8e0b5f'
   when OS.linux?
     if Hardware::CPU.intel?
-      url 'https://github.com/eng618/eng/releases/download/v0.16.14/eng_Linux_x86_64.tar.gz'
-      sha256 '63df2592aced1858457a07088d6e1499abc463fe1296a09f0974ac28a67aaa28'
+      url 'https://github.com/eng618/eng/releases/download/v0.16.15/eng_Linux_x86_64.tar.gz'
+      sha256 '6dd5c42971ae911008991824321a5fdd2575b10644c63614b7ea056f42680f9e'
     elsif Hardware::CPU.arm?
-      url 'https://github.com/eng618/eng/releases/download/v0.16.14/eng_Linux_arm64.tar.gz'
-      sha256 '16e17205bea03bd2e07c683a85fb81b2e452f79077719231e88e2321739b8e7e'
+      url 'https://github.com/eng618/eng/releases/download/v0.16.15/eng_Linux_arm64.tar.gz'
+      sha256 '0ebfc8921c4e6a174f5cda765a544b904aa817e1a2f68d7cd7e383d67ca470de'
     end
   end
   license 'MIT'
@@ -26,7 +26,7 @@ class Eng < Formula
     puts "eng installed successfully"
     puts "Permissions of eng: #{File.stat("#{bin}/eng").mode.to_s(8)}"
     # Verify the binary is functional before generating completions
-    system "#{bin}/eng", '--version'
+    system "#{bin}/eng", '--help'
     generate_completions
   end
 
