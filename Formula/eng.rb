@@ -3,18 +3,18 @@ class Eng < Formula
   homepage 'https://github.com/eng618/eng'
   case
   when OS.mac? && Hardware::CPU.intel?
-    url 'https://github.com/eng618/eng/releases/download/v0.17.0/eng_Darwin_x86_64.tar.gz'
-    sha256 '2986adab509fce51ac7ed2a3abea927a34f0f0caad57dda52c599176365e4e8d'
+    url 'https://github.com/eng618/eng/releases/download/v0.17.1/eng_Darwin_x86_64.tar.gz'
+    sha256 'ca1b4e8c841d3f1cea83f9244b2590fbb3d0f0cf6ae33df77234d50f04194929'
   when OS.mac? && Hardware::CPU.arm?
-    url 'https://github.com/eng618/eng/releases/download/v0.17.0/eng_Darwin_arm64.tar.gz'
-    sha256 'c4f14a2db840b86b23e3bb40f498bfdfec31e6caa56e7130d52a0eb868fc6001'
+    url 'https://github.com/eng618/eng/releases/download/v0.17.1/eng_Darwin_arm64.tar.gz'
+    sha256 '3d23197063f46c0e555f4ff5072bb133982b135ea242ca93a88aaa9a3e4e81be'
   when OS.linux?
     if Hardware::CPU.intel?
-      url 'https://github.com/eng618/eng/releases/download/v0.17.0/eng_Linux_x86_64.tar.gz'
-      sha256 'b603fae847750d531ab14e09c7600a8cfbf583ab8be84609f8345fffca9d0ab8'
+      url 'https://github.com/eng618/eng/releases/download/v0.17.1/eng_Linux_x86_64.tar.gz'
+      sha256 '3ec0a86b6b81e07fd1429e6605c3ec0863b185fbb9ff1c42d43dd6c82ed5259c'
     elsif Hardware::CPU.arm?
-      url 'https://github.com/eng618/eng/releases/download/v0.17.0/eng_Linux_arm64.tar.gz'
-      sha256 'fa7e33e4bf2766928040d8c898d882d46ab6cf2cc730ec3bf7006f97e3a5266f'
+      url 'https://github.com/eng618/eng/releases/download/v0.17.1/eng_Linux_arm64.tar.gz'
+      sha256 '20e63b2e63b54fbe7d28ce3b50fe51e3674ebb83a4e320d4bfa35eed46b3113e'
     end
   end
   license 'MIT'
