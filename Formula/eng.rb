@@ -1,22 +1,22 @@
 class Eng < Formula
   desc 'Personal cli to help facilitate my normal workflow'
   homepage 'https://github.com/eng618/eng'
-  version '0.18.2'
+  version '0.18.3'
   # URLs now use TAG_NAME (with v) for path, and FILE variable (without v) for filename
   case
   when OS.mac? && Hardware::CPU.intel?
-    url 'https://github.com/eng618/eng/releases/download/v0.18.2/eng_0.18.2_Darwin_x86_64.tar.gz'
-    sha256 '55e23598e1fea176c3dd4a6a371c97fb8b44b12a2d754ff5ecdb769964c3780a'
+    url 'https://github.com/eng618/eng/releases/download/v0.18.3/eng_0.18.3_Darwin_x86_64.tar.gz'
+    sha256 '140da1165fb2daaac96b20b95cb08455ed7fdd68e191f34d78a98e999738d5f6'
   when OS.mac? && Hardware::CPU.arm?
-    url 'https://github.com/eng618/eng/releases/download/v0.18.2/eng_0.18.2_Darwin_arm64.tar.gz'
-    sha256 '2ee7258713374e83eb23e4f696c8c7b049eee7962e430dead280130fc48a84eb'
+    url 'https://github.com/eng618/eng/releases/download/v0.18.3/eng_0.18.3_Darwin_arm64.tar.gz'
+    sha256 '9c515c09f6ca339859bae6ae8007a8fad1cb0c2814967b450bcee520a5884b1b'
   when OS.linux?
     if Hardware::CPU.intel?
-      url 'https://github.com/eng618/eng/releases/download/v0.18.2/eng_0.18.2_Linux_x86_64.tar.gz'
-      sha256 'f68e231217aec05c27d9691828629ff0542af13c9117d2c77ee64d2c0971c1b5'
+      url 'https://github.com/eng618/eng/releases/download/v0.18.3/eng_0.18.3_Linux_x86_64.tar.gz'
+      sha256 'e6f20fbfe02d094a9ef486c61dbab6c1d3be0fa2b655b924b162a5d74a5e198b'
     elsif Hardware::CPU.arm?
-      url 'https://github.com/eng618/eng/releases/download/v0.18.2/eng_0.18.2_Linux_arm64.tar.gz'
-      sha256 'db41b070a6e4a23d89f30c317c47a57f095bde07205dfed004fe97bdb3edb76c'
+      url 'https://github.com/eng618/eng/releases/download/v0.18.3/eng_0.18.3_Linux_arm64.tar.gz'
+      sha256 'c7a35bcd1c84dfee227f2185791ed22390f7cb35cf18431f8750b79a60baddc8'
     end
   end
   license 'MIT'
