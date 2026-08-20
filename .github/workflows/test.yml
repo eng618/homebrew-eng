@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - name: Checkout tap repository
-        uses: actions/checkout@v7
+        uses: actions/checkout@v6
 
       - name: Set up Homebrew
         id: set-up-homebrew
@@ -43,4 +43,3 @@ jobs:
 
       - name: Test Formula
         run: brew test eng618/eng/eng
-
