@@ -1,8 +1,8 @@
 class Eng < Formula
   desc "Personal CLI to help facilitate my normal workflow"
   homepage "https://github.com/eng618/eng"
-  version "1.40.1"
   license "MIT"
+
 
   on_macos do
     if Hardware::CPU.intel?
