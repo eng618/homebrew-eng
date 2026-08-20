@@ -1,0 +1,38 @@
+name: Brew Audit & Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit-and-test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout tap repository
+        uses: actions/checkout@v7
+
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Audit Formula
+        run: brew audit --strict --online Formula/eng.rb
+
+      - name: Install Formula
+        run: brew install Formula/eng.rb
+
+      - name: Test Formula
+        run: brew test Formula/eng.rb
