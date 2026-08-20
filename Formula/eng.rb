@@ -52,6 +52,6 @@ class Eng < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/eng --version")
-    assert_match "Personal CLI", shell_output("#{bin}/eng --help")
+    assert_match "USAGE", shell_output("#{bin}/eng --help")
   end
 end
