@@ -28,11 +28,19 @@ jobs:
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
 
+      - name: Cache Homebrew Bundler RubyGems
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.set-up-homebrew.outputs.gems-path }}
+          key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
+          restore-keys: ${{ runner.os }}-rubygems-
+
       - name: Audit Formula
-        run: brew audit --strict --online Formula/eng.rb
+        run: brew audit --strict --online eng618/eng/eng
 
       - name: Install Formula
-        run: brew install Formula/eng.rb
+        run: brew install eng618/eng/eng
 
       - name: Test Formula
-        run: brew test Formula/eng.rb
+        run: brew test eng618/eng/eng
+
