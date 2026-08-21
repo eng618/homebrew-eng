@@ -1,13 +1,20 @@
-# Homebrew formula for eng cli
+# Homebrew Tap for `eng` CLI
+  
+Homebrew and Linuxbrew tap for the [`eng`](https://github.com/eng618/eng) CLI tool.
 
-## Install
+## Installation
 
-```shell
+```sh
 brew tap eng618/eng
+brew install --cask eng
+```
 
-brew install eng
+Or install directly in a single command:
+
+```sh
+brew install --cask eng618/eng/eng
 ```
 
 ## Source
 
-Source code can be found here: <https://github.com/eng618/eng>
+Source repository: <https://github.com/eng618/eng>
