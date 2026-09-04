@@ -5,7 +5,6 @@
 class Eng < Formula
   desc "Personal CLI to help facilitate my normal workflow"
   homepage "https://github.com/eng618/eng"
-  version "1.52.0"
   license "MIT"
 
   on_macos do

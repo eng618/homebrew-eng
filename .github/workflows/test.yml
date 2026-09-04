@@ -35,13 +35,11 @@ jobs:
           key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
           restore-keys: ${{ runner.os }}-rubygems-
 
-      - name: Audit Cask
-        run: brew audit --strict --online --cask eng618/eng/eng
+      - name: Audit Formula
+        run: brew audit --strict --online eng618/eng/eng
 
-      - name: Install Cask
-        run: brew install --cask eng618/eng/eng
+      - name: Install Formula
+        run: brew install eng618/eng/eng
 
-      - name: Test Cask
-        run: |
-          eng --version
-          eng --help
+      - name: Test Formula
+        run: brew test eng618/eng/eng

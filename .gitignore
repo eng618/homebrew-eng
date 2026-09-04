@@ -87,3 +87,6 @@ thumb
 sketch
 
 # End of https://www.toptal.com/developers/gitignore/api/osx,linux,go,react
+
+#Ignore vscode AI rules
+.github/instructions/codacy.instructions.md
