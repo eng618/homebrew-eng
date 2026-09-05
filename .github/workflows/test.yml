@@ -35,8 +35,11 @@ jobs:
           key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
           restore-keys: ${{ runner.os }}-rubygems-
 
+      # GoReleaser's `brews` generator always emits an explicit `version`
+      # stanza, which `brew audit` flags as redundant with the version
+      # scanned from the URL. Except that check so releases stay green.
       - name: Audit Formula
-        run: brew audit --strict --online eng618/eng/eng
+        run: brew audit --strict --online --except version eng618/eng/eng
 
       - name: Install Formula
         run: brew install eng618/eng/eng
