@@ -5,13 +5,13 @@
 class Eng < Formula
   desc "Personal CLI to help facilitate my normal workflow"
   homepage "https://github.com/eng618/eng"
-  version "1.62.0"
+  version "1.63.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/eng618/eng/releases/download/v1.62.0/eng_1.62.0_Darwin_x86_64.tar.gz"
-      sha256 "762c19529d984dcbdd3756ebf34cb51ac008b183291553d409e32cde20b8bd61"
+      url "https://github.com/eng618/eng/releases/download/v1.63.0/eng_1.63.0_Darwin_x86_64.tar.gz"
+      sha256 "3221fe618a5adc3ea8415301efb537ebb3bf70856ccb6962148bfbfd4a1ed17a"
 
       define_method(:install) do
         bin.install "eng"
@@ -19,8 +19,8 @@ class Eng < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/eng618/eng/releases/download/v1.62.0/eng_1.62.0_Darwin_arm64.tar.gz"
-      sha256 "9a3334571dbfb6111d22f5742e7e099983872931283b77b429b90ec2d12354e1"
+      url "https://github.com/eng618/eng/releases/download/v1.63.0/eng_1.63.0_Darwin_arm64.tar.gz"
+      sha256 "50a2317170ec49841e5ae09ea89dd0474d1a3b6245ba5344445b243539bf0475"
 
       define_method(:install) do
         bin.install "eng"
@@ -31,16 +31,16 @@ class Eng < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eng618/eng/releases/download/v1.62.0/eng_1.62.0_Linux_x86_64.tar.gz"
-      sha256 "d0768e3a0e08849dd42425eff5715fdd25c34b50cd89fdffd7f046cc6a42dc0a"
+      url "https://github.com/eng618/eng/releases/download/v1.63.0/eng_1.63.0_Linux_x86_64.tar.gz"
+      sha256 "5219dc2d3ef001e6dd38a48f1408e1d86a2e55257681b7175081ff660b166df7"
       define_method(:install) do
         bin.install "eng"
         generate_completions_from_executable(bin/"eng", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eng618/eng/releases/download/v1.62.0/eng_1.62.0_Linux_arm64.tar.gz"
-      sha256 "acf56a7901759a48e362b649f25c60e60b34184484da8cb00ad8ec1a4c399ab0"
+      url "https://github.com/eng618/eng/releases/download/v1.63.0/eng_1.63.0_Linux_arm64.tar.gz"
+      sha256 "cc66c265ff931f7f6c313b0e76235024acdc475a4b478fde0978c4437833b235"
       define_method(:install) do
         bin.install "eng"
         generate_completions_from_executable(bin/"eng", "completion")
